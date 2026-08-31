@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>OSINT Panel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>OSINT Panel</h1>
+        <p class="subtitle">Агрегатор публичных данных: WHOIS, IP, Email, SSL</p>
+    </header>
+
+    <main class="grid">
+        <section class="card">
+            <h2>WHOIS домена</h2>
+            <input type="text" id="domain-input" placeholder="example.com">
+            <button onclick="callApi('whois', 'domain', 'domain-input', 'whois-result')">Проверить</button>
+            <pre id="whois-result"></pre>
+        </section>
+
+        <section class="card">
+            <h2>Геолокация IP</h2>
+            <input type="text" id="ip-input" placeholder="8.8.8.8">
+            <button onclick="callApi('ip', 'ip', 'ip-input', 'ip-result')">Проверить</button>
+            <pre id="ip-result"></pre>
+        </section>
+
+        <section class="card">
+            <h2>Проверка Email</h2>
+            <input type="text" id="email-input" placeholder="user@example.com">
+            <button onclick="callApi('email', 'email', 'email-input', 'email-result')">Проверить</button>
+            <pre id="email-result"></pre>
+        </section>
+
+        <section class="card">
+            <h2>SSL сертификат</h2>
+            <input type="text" id="ssl-input" placeholder="example.com">
+            <button onclick="callApi('ssl', 'hostname', 'ssl-input', 'ssl-result')">Проверить</button>
+            <pre id="ssl-result"></pre>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
