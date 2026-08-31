@@ -47,7 +47,6 @@ In addition to running it in a browser, a ready-to-use desktop build is availabl
 
 Download and run it — the app will spin up a local server and open the panel's interface in its own window, no need to manually run `python run.py` and open a browser.
 
-> The file currently in `dist/` is a placeholder — it will be replaced with the actual build.
 
 ## Installation
 
